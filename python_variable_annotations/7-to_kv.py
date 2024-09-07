@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module contains a function that takes a string and an int or float, 
+This module contains a function that takes a string and an int or float,
 and returns a tuple.
 """
 
