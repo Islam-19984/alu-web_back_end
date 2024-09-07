@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""
+The module contains a function that takes an iterable of sequences and returns
+a list of tuples with each sequence and its length.
+"""
+
 from typing import Iterable, Sequence, List, Tuple
 
 
