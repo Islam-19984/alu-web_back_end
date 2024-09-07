@@ -14,14 +14,4 @@ def measure_time(n: int, max_delay: int) -> float:
     # Start measuring time
     start_time = time.perf_counter()
 
-    # Run wait_n asynchronously and wait for it to finish
-    asyncio.run(wait_n(n, max_delay))
-
-    # Stop measuring time
-    end_time = time.perf_counter()
-
-    # Calculate the total elapsed time
-    total_time = end_time - start_time
-
-    # Return the average time per coroutine
-    return total_time / n
+    # Run wa
