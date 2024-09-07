@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-import time
+""" 2. Measure the runtime
+"""
+
 import asyncio
-from concurrent_coroutines import wait_n
+import random
+from time import perf_counter
+
+wait_n = __import__('1-concurrent_coroutines').wait_n
+
 
 def measure_time(n: int, max_delay: int) -> float:
+    """ Measure runtime.
     """
-    Measures the total execution time for wait_n(n, max_delay),
-    and returns the average time per coroutine.
-    :param n: Number of times to call wait_n.
-    :param max_delay: The maximum delay for each call.
-    :return: Average time per coroutine.
-    """
-    # Start measuring time
-    start_time = time.perf_counter()
-
-    # Run wa
+    s = perf_counter()
+    asyncio.run(wait_n(n, max_delay))
+    elapsed = perf_counter() - s
+    return elapsed
