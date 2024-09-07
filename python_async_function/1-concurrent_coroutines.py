@@ -4,12 +4,12 @@ This module contains an asynchronous coroutine wait_n that spawns multiple
 instances of wait_random, waits for their completion, and returns a sorted
 list of the delays.
 
-The wait_random function is imported from the 0-basic_async_syntax module.
+The wait_random function is imported from the basic_async_syntax module.
 """
 
 import asyncio
 from typing import List
-from 0-basic_async_syntax import wait_random
+from basic_async_syntax import wait_random # updated import
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
