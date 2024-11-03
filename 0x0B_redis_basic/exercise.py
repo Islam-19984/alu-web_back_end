@@ -103,7 +103,7 @@ class Cache:
             Return:
                 Key or number uuid
         """
-        key = self._redit.get(key)
+        key = self._redis.get(key)
 
         if fn:
             return fn(key)
@@ -112,7 +112,7 @@ class Cache:
 
     def get_str(self, key: str) -> str:
         """ Parametrized get str """
-        return self._redit.get(key).decode("utf-8")
+        return self._redis.get(key).decode("utf-8")
 
     def get_int(self, key: str) -> int:
         """ Parametrized get int """
